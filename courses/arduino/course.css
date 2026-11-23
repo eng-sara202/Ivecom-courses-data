@@ -1,0 +1,111 @@
+/* تنسيقات صفحة تفاصيل الكورس - تعتمد على ألوان style.css الرئيسي */
+.chero{position:relative;overflow:hidden;padding:40px 0 50px;background:radial-gradient(circle at 80% 10%,var(--bg2),var(--bg) 60%)}
+.chero .wrap{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+@media(max-width:860px){.chero .wrap{grid-template-columns:1fr}}
+.crumbs{font-size:14px;color:var(--mute);margin-bottom:10px}.crumbs a{color:var(--teal);font-weight:700}
+.course-img{aspect-ratio:4/3;border-radius:28px;overflow:hidden;border:3px solid var(--teal);background:var(--card);box-shadow:0 30px 60px -25px #00bfae99;display:grid;place-items:center}
+.course-img img{width:100%;height:100%;object-fit:cover}
+.course-img:empty::before{content:"مكان صورة الكورس";color:var(--mute);font-weight:700}
+.ctag{display:inline-block;padding:4px 16px;border:1px solid var(--teal);border-radius:99px;color:var(--teal);font-weight:700;font-size:14px}
+.chero h1{margin:14px 0 8px;font-size:clamp(30px,4.6vw,48px);line-height:1.3;font-weight:900}
+.chero .lead{color:var(--mute);font-size:18px;margin:0 0 20px}
+.price-box{display:inline-flex;align-items:baseline;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 24px}
+.price-box small{color:var(--mute);font-weight:700}
+.price{font-family:'Space Grotesk','Cairo',sans-serif;font-size:34px;font-weight:700;color:var(--teal);min-width:3ch}
+.price:empty::before{content:"—"}
+/* شريط البيانات */
+.facts-strip{padding:0 0 10px;margin-top:-20px;position:relative;z-index:2}
+.fs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 18px 45px -34px #00bfae99;overflow:hidden}
+.fs div{padding:18px 12px;text-align:center;border-inline-start:1px solid var(--line)}
+.fs div:first-child{border-inline-start:0}
+.fs i{font-style:normal;font-size:26px;display:block}
+.fs small{display:block;color:var(--mute);font-weight:700;font-size:13px}
+.fs b{display:block;font-size:18px;color:var(--ink)}
+.csec{padding:60px 0}
+.csec h2{margin-bottom:26px}
+/* الخطة الشهرية */
+.months{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.month{background:linear-gradient(145deg,var(--card),color-mix(in srgb,var(--bg2) 34%,var(--card)));border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px;transition:transform .3s,border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.month:hover{transform:translateY(-5px);border-color:var(--teal);box-shadow:0 24px 55px -32px #00bfae99}
+.mbadge{align-self:flex-start;background:linear-gradient(110deg,var(--teal),var(--teal2));color:#032421;font-weight:900;padding:4px 18px;border-radius:99px;font-size:14px}
+.month h3{margin:4px 0 2px;font-size:20px;line-height:1.5}
+.month ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;flex:1}
+.month li{display:flex;gap:10px;color:var(--mute);font-size:15px;line-height:1.7}
+.month li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:900;color:#032421;background:var(--teal);margin-top:3px}
+.proj{margin-top:6px;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:8px 14px;font-weight:800;direction:ltr;text-align:center}
+.proj small{display:block;direction:rtl;color:var(--teal);font-size:13px}
+/* ثلاث صناديق */
+.tri{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px}
+.box h3{margin:0 0 14px;font-size:20px;color:var(--teal)}
+.box .skills{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.box .skills div{text-align:center;background:var(--bg2);border-radius:14px;padding:12px 6px;font-weight:700;font-size:14px}
+.box .skills i{font-style:normal;display:block;font-size:26px}
+.box ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.box li{display:flex;gap:10px;color:var(--mute)}
+.box li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:13px;color:#032421;background:var(--teal)}
+.prereq{background:linear-gradient(125deg,#062d35,#064e49 55%,#087f73);color:#fff;border:0}
+.prereq h3{color:#fff}.prereq p{margin:0;background:#ffffff1f;border-radius:14px;padding:14px;font-weight:800;text-align:center}
+.pcount{display:flex;align-items:center;gap:14px;margin-top:14px;background:var(--bg2);border-radius:14px;padding:10px 16px;font-weight:800}
+.pcount b{font-family:'Space Grotesk',sans-serif;font-size:34px;color:var(--teal)}
+/* لماذا */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.why div{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 10px;text-align:center;font-weight:700;font-size:14px;transition:.25s}
+.why div:hover{border-color:var(--teal);transform:translateY(-4px)}
+.why i{font-style:normal;display:block;font-size:30px;margin-bottom:4px}
+.details{display:grid;grid-template-columns:1.4fr 1fr;gap:22px;align-items:stretch}
+@media(max-width:820px){.details{grid-template-columns:1fr}}
+.dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.dl div{background:var(--bg2);border-radius:14px;padding:14px;text-align:center;font-weight:800}
+.dl small{display:block;color:var(--mute);font-weight:600}
+.dl i{font-style:normal;font-size:26px;display:block}
+.note{background:color-mix(in srgb,#ff6d6d 10%,var(--card));border:1px solid #ff9b9b;border-radius:22px;padding:22px}
+.note h3{margin:0 0 8px;color:#e04848}.note p{margin:0;color:var(--mute)}
+.stemb{display:flex;align-items:center;gap:10px;margin-top:12px;font-weight:800;color:var(--teal)}
+/* المدربون */
+.trainers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.trainer{display:flex;gap:18px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+.t-img{flex:none;width:96px;height:96px;border-radius:50%;overflow:hidden;border:3px solid var(--teal);background:var(--bg2)}
+.t-img img{width:100%;height:100%;object-fit:cover}
+.t-name{margin:4px 0 6px;font-size:21px;font-weight:800}.t-name:empty::before{content:"اسم المدرب";color:var(--mute);font-weight:600}
+.t-desc{margin:0;color:var(--mute);font-size:15px}.t-desc:empty::before{content:"وصف المدرب"}
+.enroll{text-align:center;background:linear-gradient(125deg,#062d35,#064e49 55%,#087f73);color:#fff;border-radius:30px;padding:48px 24px}
+.enroll h2{color:#fff}.enroll h2::after{margin:6px auto 0;background:#fff}
+.enroll .btn.p{background:#fff;color:#033b36;border-color:#fff}
+.back{margin-top:26px;text-align:center}
+
+/* ===== الشهادة والمسابقات ===== */
+.cert{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.cbox{background:linear-gradient(145deg,var(--card),color-mix(in srgb,var(--bg2) 34%,var(--card)));border:1px solid var(--line);border-radius:22px;padding:28px 24px;text-align:center;transition:transform .3s,border-color .3s,box-shadow .3s}
+.cbox:hover{transform:translateY(-5px);border-color:var(--teal);box-shadow:0 24px 55px -32px #00bfae99}
+.cbox i{font-style:normal;font-size:44px;display:block;margin-bottom:6px}
+.cbox h3{margin:0 0 8px;font-size:21px;color:var(--teal)}
+.cbox p{margin:0;color:var(--mute)}
+/* ===== أنشطة الشهر ===== */
+.acts{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:2px}
+.acts small{flex-basis:100%;color:var(--teal);font-weight:800;font-size:13px}
+.acts span{background:var(--bg2);border:1px solid var(--line);border-radius:99px;padding:3px 12px;font-size:13px;font-weight:700;color:var(--ink)}
+.month .proj+.acts,.month .acts+.proj{margin-top:6px}
+/* ===== صورة بوستر الكورس ===== */
+.course-img.poster{aspect-ratio:auto;max-width:430px;width:100%;margin-inline:auto;background:var(--card);display:block}
+.course-img.poster a{display:block}
+.course-img.poster img{height:auto;object-fit:contain;display:block;transition:transform .35s}
+.course-img.poster:hover img{transform:scale(1.02)}
+/* ===== السعر (الهيرو) ===== */
+a.price-box{text-decoration:none;color:inherit;transition:border-color .25s,transform .25s}
+a.price-box:hover{border-color:var(--teal);transform:translateY(-2px)}
+/* ===== قسم الأسعار ===== */
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.pcell{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 18px;text-align:center;display:flex;flex-direction:column;gap:6px;transition:transform .3s,border-color .3s,box-shadow .3s}
+.pcell:hover{transform:translateY(-5px);border-color:var(--teal);box-shadow:0 24px 55px -32px #00bfae99}
+.pcell small{color:var(--mute);font-weight:700}
+.pv{font-family:'Space Grotesk','Cairo',sans-serif;font-size:30px;font-weight:700;color:var(--teal);min-height:1.4em}
+.pv:empty::before{content:"—";color:var(--mute);font-weight:500}
+.pcell.main{background:linear-gradient(125deg,#062d35,#064e49 55%,#087f73);border:0;color:#fff}
+.pcell.main small{color:#ffffffcc}.pcell.main .pv{color:#fff;font-size:38px}.pcell.main .pv:empty::before{color:#ffffff99}
+.pcell.offer{border-style:dashed;border-color:var(--teal)}
+.pnote{margin:18px 0 0;text-align:center;color:var(--mute);font-weight:600}
+/* ===== المدرب ===== */
+.t-img{display:grid;place-items:center}
+.t-img:empty::before{content:"";width:100%;height:100%;display:block;background:var(--bg2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Ccircle cx='48' cy='36' r='16' fill='%2300bfae' opacity='.55'/%3E%3Cpath d='M16 90c2-19 15-30 32-30s30 11 32 30z' fill='%2300bfae' opacity='.55'/%3E%3C/svg%3E") center/cover no-repeat}
+.t-role{display:inline-block;margin-bottom:2px;font-size:12.5px;font-weight:800;color:var(--teal);border:1px solid var(--teal);border-radius:99px;padding:1px 12px}
